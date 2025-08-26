@@ -1,0 +1,52 @@
+
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WALD Garage — Shop</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="main.js"></script>
+</head>
+<body>
+  <header class="topbar small">
+    <div class="container topbar-inner">
+      <a href="index.html" class="brand"><img src="logo.png" alt="WALD Garage" class="logo"></a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link active">Shop</a>
+        <a href="komunitas.html" class="nav-link">Komunitas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container shop">
+    <section class="shop-hero">
+      <h1>Shop our collection</h1>
+      <p class="muted">Filter by category or click <strong>View</strong> to read details about each model.</p>
+    </section>
+
+    <div class="categories" role="tablist" aria-label="Product categories">
+      <button data-cat="All" class="btn small active">All</button>
+      <button data-cat="JDM" class="btn small">JDM</button>
+      <button data-cat="Supercar" class="btn small">Supercar</button>
+      <button data-cat="Race" class="btn small">Race</button>
+      <button data-cat="Fast & Furious" class="btn small">Fast & Furious</button>
+    </div>
+
+    <section class="products-grid" id="productsGrid" aria-live="polite" aria-label="Products listing">
+      <!-- products injected by JS -->
+    </section>
+  </main>
+
+  <!-- Modal for product details -->
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-content" role="document">
+      <button id="closeModal" class="modal-close" aria-label="Close modal">&times;</button>
+      <h2 id="modal-title">Car Name</h2>
+      <img id="modal-img" src="logo.png" alt="car image">
+      <p id="modal-bio"><strong>Biography:</strong> —</p>
+      <p id="modal-desc"><strong>Description:</strong> —</p>
+    </div>
+  </div>
+</body>
+</html>
